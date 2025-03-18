@@ -1,0 +1,12 @@
+import msvcrt
+
+total = 0
+print("Нажимайте клавиши (Esc для выхода):")
+
+while True:
+    char = msvcrt.getch().decode('utf-8')  
+    if char == '\x1b':  
+        break
+    total += ord(char)
+
+print("Сумма кодов:", total)
